@@ -1,11 +1,11 @@
 require "option_parser"
 
-distributions = [] of String
+options_list = [] of String
 
 parser = OptionParser.parse do |parser|
   parser.banner = "Usage: cfm.sh [arguments]"
   parser.on("-v", "--version", "Show version") {puts "version 1.0"}
-  parser.on("-l LIST", "--list=LIST", "Example: $ cfm.sh -l \"Ubuntu Debian Mint\"") { |list| distributions = list.split }
+  parser.on("-l LIST", "--list=LIST", "Example: $ cfm.sh -l \"Ubuntu Debian Mint\"") { |list| options_list = list.split }
   parser.on("-h", "--help", "Show help") do
     puts parser
     exit
@@ -17,14 +17,14 @@ parser = OptionParser.parse do |parser|
   end
 end
 
-def calc_winner(distros)
+def calc_winner(from_list)
   rng = Random.new
-  winner = distros[rng.rand(distros.size)]
-  puts "You should install #{winner}"
+  winner = from_list[rng.rand(from_list.size)]
+  puts " #{winner}"
 end
 
-if distributions.size > 0
-  calc_winner(distributions)
+if options_list.size > 0
+  calc_winner(options_list)
 else
   puts parser
   exit(1)
