@@ -20,7 +20,7 @@ end
 def calc_winner(from_list)
   rng = Random.new
   winner = from_list[rng.rand(from_list.size)]
-  puts " #{winner}"
+  puts "You should go with #{winner}"
 end
 
 if options_list.size > 0
