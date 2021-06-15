@@ -3,9 +3,9 @@ require "option_parser"
 distributions = [] of String
 
 parser = OptionParser.parse do |parser|
-  parser.banner = "Usage: distrohop [arguments]"
+  parser.banner = "Usage: cfm.sh [arguments]"
   parser.on("-v", "--version", "Show version") {puts "version 1.0"}
-  parser.on("-l LIST", "--list=LIST", "Example: $ distrohopper -l \"Ubuntu Debian Mint\"") { |list| distributions = list.split }
+  parser.on("-l LIST", "--list=LIST", "Example: $ cfm.sh -l \"Ubuntu Debian Mint\"") { |list| distributions = list.split }
   parser.on("-h", "--help", "Show help") do
     puts parser
     exit
