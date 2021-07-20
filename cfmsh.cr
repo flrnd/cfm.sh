@@ -4,7 +4,7 @@ options_list = [] of String
 
 parser = OptionParser.parse do |parser|
   parser.banner = "Usage: cfm.sh [arguments]"
-  parser.on("-v", "--version", "Show version") { puts "version 1.0" }
+  parser.on("-v", "--version", "Show version") { puts "version 1.0.1" }
   parser.on("-l LIST", "--list=LIST", "Example: $ cfm.sh -l \"Ubuntu Debian Mint\"") { |list| options_list = list.split }
   parser.on("-h", "--help", "Show help") do
     puts parser
