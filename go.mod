@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/flrnd/gorng v0.0.1
-	github.com/muesli/coral v1.0.0
+	github.com/spf13/cobra v1.4.0
 )
 
 require (
