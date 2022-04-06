@@ -3,10 +3,10 @@ package cmd
 import (
 	"log"
 
-	"github.com/muesli/coral"
+	"github.com/spf13/cobra"
 )
 
-var rootCmd = &coral.Command{Use: "cfm.sh"}
+var rootCmd = &cobra.Command{Use: "cfm.sh"}
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
