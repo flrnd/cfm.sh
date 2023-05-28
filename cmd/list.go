@@ -21,5 +21,5 @@ var listCmd = &cobra.Command{
 }
 
 func chooseOne(args []string) {
-	fmt.Println("cfm says, you should choose: ", args[gorng.Rng.Int()%len(args)])
+	fmt.Printf("%s", args[gorng.Rng.Int()%len(args)])
 }
